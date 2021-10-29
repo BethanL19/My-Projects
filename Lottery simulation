@@ -1,0 +1,12 @@
+lottery_ticket = [19,13,7,31,49,5,11]
+prizes = {'0':'no prize','1':'no prize','2':'no prize','3':'£20','4':'£40','5':'£100','6':'£10000','7':'£1000000'}
+import random
+lottery_random = list(random.sample(range(50),7))
+print('Your numbers: {}'.format(lottery_ticket))
+print('Lotto numbers: {}'.format(lottery_random))
+count = 0
+for number in lottery_ticket:
+    if number in lottery_random:
+        count=+1
+winnings = prizes[str(count)]
+print('You have {} matching numbers! You win: {}!'.format(count,winnings))
